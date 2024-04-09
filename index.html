@@ -13,20 +13,23 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
+        background-color: #d4fff8;
       }
-      .img-container {
+      /* .img-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 200px;
       }
+       */
       .navbar-brand {
         font-weight: bold;
-        color: #343a40;
+        color: black;
       }
       .nav-link {
-        color: #343a40 !important;
+        color: black !important;
+      }
+      .nav-link:hover{
+        text-decoration: underline;
       }
       .container {
         background-color: #ffffff;
@@ -38,11 +41,18 @@
         margin-bottom: 20px;
       }
       .accordion-button {
-        background-color: #007bff;
+        background-color: #92699F;
         color: #ffffff;
       }
+     .btn{
+        background-color: #92699F;
+        border: #92699F;
+      }
+      .btn:hover{
+        background-color: #bd9cc7;
+      }
       .accordion-button:hover {
-        background-color: #8708a0;
+        background-color: #bd9cc7;
       }
       .accordion-body {
         background-color: #f1f1f1;
@@ -54,13 +64,16 @@
       .project-container {
         margin-bottom: 40px;
       }
+      #gallerytitle{
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Harmony Hub</a>
+        <a class="navbar-brand" href="#"><img src="Images/newlogo.png" height="50" width="50"> Harmony Hub</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -74,15 +87,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Our project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Contact">Ask us questions</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#faq">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -93,21 +105,17 @@
     <div class="container mt-4">
       <div class="row">
         <div class="col-12 col-md-9">
-          <p>Welcome to Harmony Hub</p>
+          <h1>Welcome to Harmony Hub</h1>
+          <h4>Uniting Music, Connecting Souls</h4> <br>
           <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Learn More
-          </button>
+          <a href= "https://www.figma.com/proto/eJwDf8DqLXewGfGfwm1zoy/Harmony-Hub?page-id=27%3A23&type=design&node-id=169-649&viewport=-2135%2C941%2C0.61&t=221rjdNUwi6BkTe8-1&scaling=scale-down&starting-point-node-id=169%3A649&mode=design"  target="_blank">
+            <button type="button" class="btn btn-primary">
+              View Our Prototype
+            </button>
+          </a>
         </div>
         <div class="col-12 col-md-3">
-          <div class="img-container">
-            <img src="Images/newlogo.png" class="w-100" />
-          </div>
+            <img src="Images/newlogo.png" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -162,8 +170,9 @@
 
     <!-- Projects Section -->
     <div class="container mt-4 project-container" id="projects">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center"><h4 id="gallerytitle">Gallery</h4>
         <div class="col-6 col-md-3 mb-4">
+          
           <div class="img-container">
             <img src="images/style.png" alt="styleguide" class="img-fluid" />
           </div>
@@ -214,7 +223,7 @@
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            What is the Harmony Hub's insight/POV statement?
+            What is Harmony Hub?
           </button>
         </h2>
         <div
@@ -224,13 +233,17 @@
           data-bs-parent="#faq"
         >
           <div class="accordion-body">
-            Musicians need a user-friendly and intuitive app that helps them
+            Harmony Hub is a revolutionary music collaboration platform designed
+            to connect musicians from all around the world. Our app provides a
+            user-friendly and intuitive interface that enables musicians to
             discover compatible collaborators, coordinate schedules, share
-            resources, foster a community, and communicate effectively because
-            collaborating with others is essential for their creative process
-            and musical growth, but current solutions lack comprehensive
-            features and intuitive interfaces tailored to their specific needs
-            and preferences.
+            resources, and communicate effectively. Whether you're a solo artist
+            looking to collaborate on a new project or a band seeking additional
+            members, Harmony Hub offers personalized matching algorithms to help
+            you find the perfect fit. With features tailored to the specific
+            needs of musicians, our platform aims to streamline the
+            collaboration process, foster a vibrant community, and empower users
+            to unleash their creativity.
           </div>
         </div>
       </div>
@@ -244,7 +257,7 @@
             aria-expanded="false"
             aria-controls="collapseTwo"
           >
-            What is the UX problem statement?
+            What are Harmony Hub's features?
           </button>
         </h2>
         <div
@@ -254,12 +267,7 @@
           data-bs-parent="#faq"
         >
           <div class="accordion-body">
-            We believe that creating a music collaboration app tailored to the
-            needs of musicians will achieve a streamlined collaboration process,
-            enabling them to find compatible collaborators, coordinate
-            schedules, share resources, and communicate effectively. This will
-            result in increased efficiency, reduced frustrations, and enhanced
-            opportunities for creative collaboration among musicians.
+            Build a comprehensive profile showcasing your music, skills, artistic roles, and goals. Easily discover other musicians to collaborate with. Search by skills, artistic roles, and goals. Get to know each other through in-depth questions. Follow and message musicians to get the ball rolling on your collaboration.
           </div>
         </div>
       </div>
@@ -273,7 +281,7 @@
             aria-expanded="false"
             aria-controls="collapseThree"
           >
-            What is the value proposition?
+            What's next for Harmony Hub?
           </button>
         </h2>
         <div
@@ -283,16 +291,9 @@
           data-bs-parent="#faq"
         >
           <div class="accordion-body">
-            Our organization, Harmony Hub, is developing a comprehensive music
-            collaboration platform to help creators solve the challenges of
-            finding compatible collaborators, coordinating schedules, sharing
-            resources, and communicating effectively. We're better because our
-            platform offers intuitive search and communication features, and
-            personalized matching algorithms empowering users to connect,
-            create, and collaborate seamlessly. We're believable because our
-            platform is backed by user feedback and industry expertise, ensuring
-            it addresses real-world challenges and offers a vibrant community
-            space where musicians can connect, learn, and grow together.
+            Coming up, we'll add community hub features and events to keep our community of artists engaged and introduce new ways to showcase your work for others to see and discover you.
+            We'll also further develop our discovery engines, add advanced scheduling features to messaging, add feedback systems to better recommend artists.
+
           </div>
         </div>
       </div>
